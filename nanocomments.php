@@ -69,6 +69,7 @@ if(isset($_POST['nanocomments_pseudo']) &&
 	AddComment($_POST['nanocomments_pseudo'],
 	           $_POST['nanocomments_website'],
 	           $_POST['nanocomments_text'],
+	           $nanocomments_dir."/".$nanocomments_pageid,
 	           $nanocomments_sizelimit);
 }
 
