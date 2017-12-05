@@ -23,7 +23,7 @@ function AddComment($pseudo, $website, $text, $fileurl, $sizelimit) {
 	}
 }
 
-function ReadComments($fileurl, $sendurl, $dateformat="Y-m-d H:i:s") {
+function ReadComments($fileurl, $dateformat="Y-m-d H:i:s") {
 	$html = "<div class='comments'>\n";
 	if(!file_exists($fileurl)) {
 		$html .= "	<div class='nocomment'>No comment.</div>\n";
@@ -46,7 +46,7 @@ function ReadComments($fileurl, $sendurl, $dateformat="Y-m-d H:i:s") {
 		}
 	}
 	$html .= "</div>\n";
-	$html .= "<form class='newcomment' action='$sendurl' method='POST'>\n";
+	$html .= "<form class='newcomment' method='POST'>\n";
 	$html .= "	<input type='text' placeholder='Name'
                  name='nanocomments_pseudo'>\n";
 	$html .= "	<input type='text' placeholder='Website'
@@ -66,12 +66,11 @@ if(isset($_POST['nanocomments_pseudo']) &&
 	AddComment($_POST['nanocomments_pseudo'],
 	           $_POST['nanocomments_website'],
 	           $_POST['nanocomments_text'],
-	           $nanocomments_dir."/".$nanocomments_pageid,
 	           $nanocomments_sizelimit);
 }
 
 echo ReadComments($nanocomments_dir."/".$nanocomments_pageid,
-                  basename($_SERVER['PHP_SELF']));
+                  $nanocomments_dateformat);
 
 ?>
 
