@@ -13,7 +13,11 @@ function AddComment($pseudo, $website, $text, $fileurl, $sizelimit) {
 	$pseudo = PurifyString($pseudo);
 	$website = PurifyString($website);
 	$text = PurifyString($text);
-	if($pseudo != '' && $text != '' && strlen($text) <= $sizelimit) {
+	if($pseudo != '' &&
+	   $text != '' &&
+       strlen($text) <= $sizelimit &&
+       strlen($pseudo) <= 50 &&
+       strlen($website) <= 256) {
 		$comment = uniqid()."\x1F\n";
 		$comment .= $pseudo."\x1F\n";
 		$comment .= $website."\x1F\n";
@@ -38,7 +42,7 @@ function ReadComments($fileurl, $dateformat) {
 			$html .= "	<div class='comment' id='$c[0]'>\n";
 			$html .= "		<div class='cominfo'>\n";
 			$html .= "			<span class='author'>$c[1]</span>\n";
-			$html .= "			<span class='website'>$c[2]</span>\n";
+			$html .= "			<span class='website'><a href='$c[2]'>Website</a></span>\n";
 			$html .= "			<span class='date'>$date</span>\n";
 			$html .= "		</div>\n";
 			$html .= "		<p>$c[4]</p>\n";
