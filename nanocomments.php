@@ -29,6 +29,7 @@ function AddComment($pseudo, $website, $text, $fileurl, $sizelimit) {
 
 function ReadComments($fileurl, $dateformat, $sizelimit) {
 	$html = "<div class='comments'>\n";
+	$html .= "<h1>Commentaires</h1>\n";
 	if(!file_exists($fileurl)) {
 		$html .= "	<div class='nocomment'>No comment.</div>\n";
 	}
@@ -51,6 +52,7 @@ function ReadComments($fileurl, $dateformat, $sizelimit) {
 	}
 	$html .= "</div>\n";
 	$html .= "<form class='newcomment' method='POST'>\n";
+	$html .= "<h1>Poster un commentaire</h1>\n";
 	$html .= "	<input type='text' placeholder='Name'  maxlength='50'
                  name='nanocomments_pseudo'>\n";
 	$html .= "	<input type='text' placeholder='Website'  maxlength='256'
