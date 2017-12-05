@@ -42,9 +42,10 @@ function ReadComments($fileurl, $dateformat, $sizelimit) {
 			$date = date($dateformat, $c[3]);
 			$html .= "	<div class='comment' id='$c[0]'>\n";
 			$html .= "		<div class='cominfo'>\n";
-			$html .= "			<span class='author'>$c[1]</span>\n";
-			$html .= "			<span class='website'><a href='$c[2]'>Website</a></span>\n";
-			$html .= "			<span class='date'>$date</span>\n";
+			$html .= "			<span class='com_author'>$c[1]</span>\n";
+			if($c[2] != "")
+				$html .= "			<span class='com_website'><a href='$c[2]'>Website</a></span>\n";
+			$html .= "			<span class='com_date'>$date</span>\n";
 			$html .= "		</div>\n";
 			$html .= "		<p>$c[4]</p>\n";
 			$html .= "	</div>\n";
