@@ -1,4 +1,4 @@
-#NanoComments
+# NanoComments
 
 A tiny comments system in PHP + flat file.
 
