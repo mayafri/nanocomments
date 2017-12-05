@@ -23,7 +23,7 @@ function AddComment($pseudo, $website, $text, $fileurl, $sizelimit) {
 	}
 }
 
-function ReadComments($fileurl, $dateformat="Y-m-d H:i:s") {
+function ReadComments($fileurl, $dateformat) {
 	$html = "<div class='comments'>\n";
 	if(!file_exists($fileurl)) {
 		$html .= "	<div class='nocomment'>No comment.</div>\n";
@@ -56,6 +56,9 @@ function ReadComments($fileurl, $dateformat="Y-m-d H:i:s") {
 	$html .= "</form>\n";		
 	return $html;
 }
+
+if(!isset($nanocomments_dateformat))
+	$nanocomments_dateformat = "Y-m-d H:i:s";
 
 if(!isset($nanocomments_sizelimit))
 	$nanocomments_sizelimit = 1000;
