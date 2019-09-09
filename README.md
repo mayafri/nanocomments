@@ -1,4 +1,4 @@
-# NanoComments
+# [FR] NanoComments
 
 Un petit système de commentaires en PHP sans base de données (stockage dans un fichier).
 
@@ -10,7 +10,7 @@ Inclure `nanocomments.php` dans votre CMS et définir les variables spéficiques
 
 ---
 
-# NanoComments
+# [EN] NanoComments
 
 A tiny comments system in PHP + flat file.
 
