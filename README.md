@@ -2,6 +2,8 @@
 
 *See below for English.*
 
+*L'ancienne version est [disponible ici](https://github.com/hyakosm/nanocomments/blob/e8d3b6ac4599b78031eec52593889c420318d22a/nanocomments.php).*
+
 NanoComments est un système de commentaires en Javascript et PHP sans base de données optimisé pour les sites statiques faits avec Jekyll.
 
 ## Fonctionnalités
@@ -28,6 +30,8 @@ NanoComments est un système de commentaires en Javascript et PHP sans base de d
  4. Pour changer le nombre de caractères max du pseudo, du site ou du contenu, changez les valeurs aux endroits où les variables `$name`, `$website` et `$content` sont créées, aux alentours de la ligne 80. Vous devrez aussi mettre à jour les valeurs dans le formulaire HTML (champs `maxlength`).
 
 ---
+
+*Old version [available here](https://github.com/hyakosm/nanocomments/blob/e8d3b6ac4599b78031eec52593889c420318d22a/nanocomments.php).*
 
 NanoComments is a flat-file comment system (written in Javascript and PHP) designed for static websites and optimized for Jekyll.
 
