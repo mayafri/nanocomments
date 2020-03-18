@@ -44,7 +44,7 @@ NanoComments is a flat-file comment system (written in Javascript and PHP) desig
  2. Check rights for this directory. The server may be allowed to create and edit files here.
  3. Add a comment section in your website (see example in `index.html`).
 
-# Customization / hack
+## Customization / hack
 
  1. By default, any comments file is limited to 500 ko. If you want to modify this limit, go to `addComment.php` in function `is_filesize_correct` and change the value multiplied by 1024 (by default it's `500 * 1024` for 500 ko).
  
