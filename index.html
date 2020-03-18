@@ -1,0 +1,34 @@
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<!-- Exemple d'insertion dans une page Jekyll -->
+
+<h2>Comments</h2>
+
+<div id="comments"></div>
+
+<script>
+	var conf = {
+	  new_comment_div: '#addcomment',
+	  comments_div: '#comments',
+	  comments_path: '{{site.baseurl}}/comments/',
+	  page_id: '{{page.slug}}'
+	};
+</script>
+<script type="text/javascript" src="{{site.baseurl}}/comments/comments.js"></script>
+
+
+<div id="addcomment">
+	<h2>Add a comment</h2>
+	
+	<input type='hidden' name='page' value='index'>
+	<input type='text' placeholder='Name*'  maxlength='100' name='name'><br>
+	<input type='text' placeholder='Website'  maxlength='255' name='website'><br>
+	<textarea placeholder='Text*' maxlength='5000'></textarea><br>
+	
+	<button onclick="addComment(conf)">Send</button>
+	<span class="errorfield"></span>
+</div>
