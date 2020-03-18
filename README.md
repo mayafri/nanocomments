@@ -46,10 +46,10 @@ NanoComments is a flat-file comment system (written in Javascript and PHP) desig
 
 # Customization / hack
 
- 1. By default, any comments file is limited at 500 ko. If you want to modify this limit, go to `addComment.php` in function `is_filesize_correct` and change the value multiplied by 1024 (by default it's `500 * 1024` for 500 ko).
+ 1. By default, any comments file is limited to 500 ko. If you want to modify this limit, go to `addComment.php` in function `is_filesize_correct` and change the value multiplied by 1024 (by default it's `500 * 1024` for 500 ko).
  
- 2. By default, the logfile is limited to 100 lines. If you want to modify this value, in `addComment.php` go to `add_comment_to_logfile` and change the number in the appropriate condition.
+ 2. By default, the logfile is limited to 100 lines. If you want to modify this value, in `addComment.php` go to `add_comment_to_logfile` and change the number in the appropriate `if`.
  
  3. If you want to disable the logfile, comment or remove the two calls `add_comment_to_logfile`... at the end of `addComment.php`.
  
- 4. If you want to modify the maximum length of strings like name, website or comment content, change numbers where  `$name`, `$website` and `$content` vars are created (around line 80) and change corresponding values in the HTML form (`maxlength` fields).
+ 4. If you want to modify the maximum length of strings like name, website or comment content, change numbers where `$name`, `$website` and `$content` vars are created (around line 80) and change corresponding values in the HTML form (`maxlength` fields).
