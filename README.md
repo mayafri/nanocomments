@@ -15,6 +15,7 @@ NanoComments est un système de commentaires en Javascript et PHP sans base de d
 
 ## Installation
 
+ 0. Assurez-vous préalablement que `php-curl` soit installé.
  1. Copiez le dossier `comments/` dans la racine du site.
  2. Assurez-vous que le serveur pourra créer et éditer des fichiers dans ce dossier.
  3. Ajoutez la zone de commentaires en vous inspirant du fichier `index.html`.
@@ -44,6 +45,7 @@ NanoComments is a flat-file comment system (written in Javascript and PHP) desig
 
 ## Setup
 
+ 0. Install `php-curl`.
  1. Copy `comments/` directory in the website root folder.
  2. Check rights for this directory. The server may be allowed to create and edit files here.
  3. Add a comment section in your website (see example in `index.html`).
