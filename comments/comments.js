@@ -18,6 +18,9 @@ function markdownDecode(textcontent) {
 	result = result.replace(/\*(.+?)\*/gm, `<em>$1</em>`);
 	result = result.replace(/_(.+?)_/gm, `<em>$1</em>`);
 
+        // Code bloc ```
+        result = result.replace(/```((.|\n)+?)```/gm, `<pre>$1</pre>`);
+
 	// Code inline `
 	result = result.replace(/`(.+?)`/gm, `<code>$1</code>`);
 
