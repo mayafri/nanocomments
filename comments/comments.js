@@ -25,10 +25,10 @@ function markdownDecode(textcontent) {
 	result = result.replace(/`(.+?)`/gm, `<code>$1</code>`);
 
 	// Liens HTTP(S)
-	result = result.replace(/(https?:\/\/\S+)/gm, `<a href="$1" target="_blank">$1</a>`);
+	result = result.replace(/\s+(https?:\/\/\S+)\s+/gm, `<a href="$1" target="_blank">$1</a>`);
 
 	// Liens balisés en Markdown [Perdu](http://perdu.com)
-	result = result.replace(/\[(.+?)\]\((.+?)\)/gm, `<a href="$2" target="_blank">$1</a>`);
+	result = result.replace(/\[(.+?)\]\((\S+)\)/gm, `<a href="$2" target="_blank">$1</a>`);
 	
 	return result;
 }
